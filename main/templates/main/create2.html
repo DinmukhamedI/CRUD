@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.co m/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script src="https://kit.fontawesome.com/5d6650f6c1.js" crossorigin="anonymous"></script>
+    <title>Form for adding data</title>
+</head>
+<style>
+    .container h1{
+    color:white;
+    }
+</style>
+<body style ="background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);">
+    <div class="container">
+        <div class="features">
+            <h1>Form for adding exist things</h1>
+            <form method = "post">
+                {% csrf_token %}
+                {{ form2.name }}<br>
+                {{ form2.price }}<br>
+                {{ form2.company }}<br>
+                <span>{{ error }}</span>
+                <button class = "btn btn-success" type="submit">Submit exists</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
